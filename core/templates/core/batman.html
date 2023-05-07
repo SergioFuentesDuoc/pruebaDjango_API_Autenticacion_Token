@@ -1,0 +1,23 @@
+{% extends 'core/plantillaMascotas.html' %}
+{% load static %}
+
+
+{% block cabecera %}
+<title>Batman</title>
+{% endblock cabecera %}
+    
+{% block mascota %}
+<div class="col-md-4 col-sm-12 separacion_superior centrado">
+    <img src="{% static 'core/imagenes/pet2.jpg' %}" alt="Mascota 1" class="imagen">
+</div>
+<div class="col-md-4 col-sm-12 separacion_superior">
+<h3 class="centro"> <b>Nombre:</b> {{ nombreMascota }}</h3>
+<h3 class="centro"> <b>Edad:</b> {{ Edad }}</h3>
+</div>
+<div class="col-md-4 col-sm-12 separacion_superior">
+    &nbsp;
+</div>
+{% endblock mascota %}
+    
+                
+            
