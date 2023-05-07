@@ -99,6 +99,22 @@ DATABASES = {
     },
 }
 
+#mysql -hcontainers-us-west-15.railway.app -uroot -p --port 7274 --protocol=TCP railway
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'NAME': 'railway',
+#        'USER': 'root',
+#        'PASSWORD': 'kTc44lgzbM9NKG7CzYp1',
+#        'HOST': 'containers-us-west-15.railway.app',
+#        'PORT': '7274',
+#    }
+#}
+
+
+
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
