@@ -17,15 +17,15 @@ def login(request):
     password = data['password']
 
     try:
-        user = User.objects.get(username=username)
+        user = User.objects.get(username=username) #select * from Users where username = username;  
     except User.DoesNotExist:
         return Response("Usuario Incorrecto")
     
     #validamos la pass
     pass_valido = check_password(password,user.password)
-    if not pass_valido:
+    if not pass_valido:   # pass_valido = True
         return Response("Contraseña Incorrecta")
 
     #permite crear o recuperar el token
-    token, created = Token.objects.get_or_create(user=user)
+    token, created = Token.objects.get_or_create(user=user) #select key from Token where user=user
     return Response(token.key)
