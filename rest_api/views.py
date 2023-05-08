@@ -33,7 +33,7 @@ def lista_mascotas(request):
 @permission_classes((IsAuthenticated,))
 def vista_mascota_mod(request, id):
     try:
-        m = Mascota.objects.get(codigoChip = id)
+        m = Mascota.objects.get(codigoChip = id) #select * from mascota where codigoChip = id
     except Mascota.DoesNotExist:
         return Response(status= status.HTTP_404_NOT_FOUND)
     

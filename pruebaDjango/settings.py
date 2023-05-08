@@ -53,6 +53,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+#(constant) CSRF_TRUSTED_ORIGINS: list [str]
+#CSRF_TRUSTED_ORIGINS = ['']
+
 ROOT_URLCONF = 'pruebaDjango.urls'
 
 TEMPLATES = [
@@ -83,6 +86,9 @@ WSGI_APPLICATION = 'pruebaDjango.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
+
+
 DATABASES = {
     'default': {
 #       'ENGINE': 'django.db.backends.sqlite3',
@@ -99,17 +105,7 @@ DATABASES = {
     },
 }
 
-#mysql -hcontainers-us-west-15.railway.app -uroot -p --port 7274 --protocol=TCP railway
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.mysql',
-#        'NAME': 'railway',
-#        'USER': 'root',
-#        'PASSWORD': 'kTc44lgzbM9NKG7CzYp1',
-#        'HOST': 'containers-us-west-15.railway.app',
-#        'PORT': '7274',
-#    }
-#}
+
 
 
 # Password validation
